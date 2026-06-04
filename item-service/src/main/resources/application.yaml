@@ -1,0 +1,13 @@
+server:
+  port: 8081
+feign:
+  okhttp:
+    enabled: true #开启okhttp功能
+  sentinel:
+    enabled: true #开启sentinel功能
+hm:
+  swagger:
+    title: 订单服务接口文档
+    package: com.wave.item.controller
+  db:
+    database: hm-item

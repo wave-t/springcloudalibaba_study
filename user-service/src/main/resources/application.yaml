@@ -1,0 +1,25 @@
+server:
+  port: 8083
+feign:
+  okhttp:
+    enabled: true #开启okhttp功能
+  sentinel:
+    enabled: true #开启sentinel功能
+hm:
+  swagger:
+    title: 用户管理接口文档
+    package: com.wave.user.controller
+  db:
+    database: hm-user
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /search/**
+      - /users/login
+      - /items/**
+      - /hi
+# keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123
